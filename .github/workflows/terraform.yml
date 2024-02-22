@@ -87,7 +87,7 @@ jobs:
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: terraform plan -input=false
-            env:
+      env:
             GOOGLE_CREDENTIALS: ${{ secrets.GCP_SA_KEY }}
 
       # On push to "master", build or change infrastructure according to Terraform configuration files

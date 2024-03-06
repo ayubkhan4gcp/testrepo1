@@ -8,7 +8,7 @@ resource "google_compute_network" "vpc_network1" {
   auto_create_subnetworks = false
 
 }
-
+/*
 #******************creating new sub network****************************************************************
 
 resource "google_compute_subnetwork" "subnet1" {
@@ -121,8 +121,8 @@ resource "google_compute_address" "static" {
   name = "ipv4-address"
 }
 
-
-
+*/
+/*
 #*****************creating bucket for backend state file in gcs******************************
 
 resource "google_storage_bucket" "GCS1" {
@@ -141,22 +141,22 @@ resource "google_storage_bucket" "GCS1" {
   }
   uniform_bucket_level_access = true
 
-  /* lifecycle_rule {
+   lifecycle_rule {
     condition {
       age = 2
     }
     action {
       type = "Delete"
     }
-  } */
+  } 
 
-  /*retention_policy {
+  retention_policy {
     is_locked = false
     retention_period = 864000
   }
-*/
-}
 
+}
+*/
 /*
 resource "google_storage_bucket_object" "picture" {
   name = "vodafone_logo"

@@ -75,7 +75,7 @@ resource "google_compute_instance" "vm-from-tf" {
 
 }
 
-
+/*
 #******************creating additional disk***********************
 
 resource "google_compute_disk" "disk-1" {
@@ -95,7 +95,7 @@ resource "google_compute_attached_disk" "adisk" {
   depends_on = [google_compute_disk.disk-1]
 }
 
-
+*/
 
 #******************creating new firewall rules and tag them in vm instance***********************************
 

@@ -14,7 +14,7 @@ resource "google_compute_network" "vpc_network1" {
 resource "google_compute_subnetwork" "subnet1" {
   name                     = var.subnet_name
   ip_cidr_range            = "10.3.0.0/16"
-  region                   = "us-central1"
+  region                   = "asia-south2"
   network                  = google_compute_network.vpc_network1.id
   private_ip_google_access = true
   depends_on               = [google_compute_network.vpc_network1]
@@ -24,7 +24,7 @@ resource "google_compute_subnetwork" "subnet1" {
 
 resource "google_compute_instance" "vm-from-tf" {
   name         = "vm-from-tf"
-  zone         = "us-central1-a"
+  zone         = "asia-south2-a"
   machine_type = "n1-standard-2"
 
   allow_stopping_for_update = true
@@ -119,7 +119,7 @@ resource "google_compute_firewall" "allow_http" {
 #******************creating Static external ip address for VM *******************************************
 resource "google_compute_address" "static" {
   name = "ipv4-address"
-  region = "us-central1"
+  region = "asia-south2"
 }
 
 

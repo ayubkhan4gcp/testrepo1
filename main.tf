@@ -119,6 +119,7 @@ resource "google_compute_firewall" "allow_http" {
 #******************creating Static external ip address for VM *******************************************
 resource "google_compute_address" "static" {
   name = "ipv4-address"
+  region = "us-central1"
 }
 
 

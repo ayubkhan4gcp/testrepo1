@@ -8,7 +8,7 @@ resource "google_compute_network" "vpc_network1" {
   auto_create_subnetworks = false
 
 }
-/*
+
 #******************creating new sub network****************************************************************
 
 resource "google_compute_subnetwork" "subnet1" {
@@ -121,7 +121,7 @@ resource "google_compute_address" "static" {
   name = "ipv4-address"
 }
 
-*/
+
 /*
 #*****************creating bucket for backend state file in gcs******************************
 
